@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: black;
+    background: none;
     height: 2000px;
 }
 
@@ -122,20 +122,38 @@ body {
     cursor: pointer; 
 }
 
-.about-section {
-    position: relative;
-    width: 100%;
+.news-section {
     height: 100vh;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3b312e, #7c3c0b);
 }
 
-.about-section video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.news-section h1 {
+    color: goldenrod;
+    opacity: 0.7;
+    font-size: 2.5rem;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-container img {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.news-container img:hover {
+    transform: scale(1.07);
+    transition: all .1s ease-in-out;
 }
