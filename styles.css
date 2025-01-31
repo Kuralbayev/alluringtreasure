@@ -14,7 +14,6 @@ html {
 
 body {
     background: none;
-    height: 2000px;
 }
 
 .navbar-logo {
@@ -69,7 +68,10 @@ body {
 .navbar-menu li a:hover {
     color: goldenrod;
     opacity: 1;
+    transition: all .07s;
     transform: scale(1.07);
+    box-shadow: 0 4px 10px rgb(221, 207, 7);
+    border-radius: 70px;
 }
 
 .navbar-wrap {
@@ -81,21 +83,24 @@ body {
 .navbar-btn {
     margin: 0 20px;
     padding: 15px 25px;
-    background-color: goldenrod;
+    background-color: rgb(197, 8, 8);
     cursor: pointer;
-    color: white;
+    color: rgb(241, 241, 241);
+    font-weight: 900;
     text-decoration: none;
-    opacity: 0.8;
     font-size: 16px;
     border: none;
     border-radius: 100px;
     transition: all .1s ease-in-out;
+    transform: scale(1.07);
 }
 
 .navbar-btn:hover {
     transform: scale(1.07);
-    transition: all .1s ease-in-out;
     opacity: 1;
+    color: gold;
+    background-color: black;
+    box-shadow: 0 4px 10px rgb(221, 207, 7);
 }
 
 .home-section {
@@ -115,11 +120,26 @@ body {
     margin-top: 80px;
     border-radius: 15px;
     transition: all .07s ease-in-out;
+    box-shadow: 0 4px 10px rgb(221, 207, 7);
 }
 
 .home-section img:hover {
     transform: scale(1.04);
     cursor: pointer; 
+}
+
+.home-content h1 {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 340px;
+    margin-left: 20px;
+    color: goldenrod;
+    font-size: 2.3rem;
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 10px rgb(221, 207, 7);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .news-section {
@@ -132,7 +152,7 @@ body {
 }
 
 .news-section h1 {
-    color: goldenrod;
+    color: gold;
     opacity: 0.7;
     font-size: 2.5rem;
     margin-top: 90px;
@@ -142,18 +162,51 @@ body {
 .news-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
-.news-container img {
-    width: 30%;
-    max-width: 300px;
-    height: auto;
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.news-container img:hover {
-    transform: scale(1.07);
-    transition: all .1s ease-in-out;
+.flip-card-back {
+    background-color: #3b312e;
+    color: gold;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
 }
