@@ -83,9 +83,9 @@ body {
 .navbar-btn {
     margin: 0 20px;
     padding: 15px 25px;
-    background-color: rgb(197, 8, 8);
+    background-color: rgb(221, 207, 7);
     cursor: pointer;
-    color: rgb(241, 241, 241);
+    color: black;
     font-weight: 900;
     text-decoration: none;
     font-size: 16px;
@@ -120,7 +120,6 @@ body {
     margin-top: 80px;
     border-radius: 15px;
     transition: all .07s ease-in-out;
-    box-shadow: 0 4px 10px rgb(221, 207, 7);
 }
 
 .home-section img:hover {
@@ -128,18 +127,12 @@ body {
     cursor: pointer; 
 }
 
-.home-content h1 {
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 340px;
-    margin-left: 20px;
-    color: goldenrod;
-    font-size: 2.3rem;
-    font-weight: 900;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 10px rgb(221, 207, 7);
-    border-radius: 15px;
-    padding: 20px;
+.home-img {
+    border: none;
+    border-radius: none;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
 }
 
 .news-section {
